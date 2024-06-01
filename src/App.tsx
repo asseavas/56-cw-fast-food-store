@@ -52,10 +52,10 @@ const App: React.FC = () => {
 
   return (
     <div className="container">
-      <div className="col-md-9">
+      <div className="col-md-8">
         <MenuContainer items={FOOD_ITEMS} onAddOrder={addOrder}/>
       </div>
-      <div className="col-md-3">
+      <div className="col-md-4">
         <OrdersContainer orders={orders} totalPrice={totalPrice} onRemoveOrder={removeOrder}/>
       </div>
     </div>

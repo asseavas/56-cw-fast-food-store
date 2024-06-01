@@ -28,12 +28,12 @@ const FoodItem: React.FC<FoodItemProps> = ({ item, onAdd }) => {
   const imageSrc = IMAGES[item.name.toLowerCase()];
 
   return (
-    <div className="food-item" onClick={onAdd}>
-      <div className="img-container">
-        <img className="food-img" src={imageSrc} alt={item.name}/>
+    <div className="food-item d-flex flex-column align-items-center rounded-4 bg-light m-3" onClick={onAdd}>
+      <p className="card-title">{item.name}</p>
+      <div className="img-container mt-2 mb-3">
+        <img className="food-img " src={imageSrc} alt={item.name}/>
       </div>
       <div className="food-item-info">
-        <div>{item.name}</div>
         <div>Price: {item.price}</div>
       </div>
     </div>

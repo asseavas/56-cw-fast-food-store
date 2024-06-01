@@ -13,9 +13,12 @@ interface MenuContainerProps {
 }
 
 const MenuContainer: React.FC<MenuContainerProps> = ({ items, onAddOrder }) => (
-  <div className="menu-container">
+  <div className="menu-container row">
+    <h2>Menu</h2>
     {items.map(item => (
-      <FoodItem key={item.name} item={item} onAdd={() => onAddOrder(item)} />
+      <div className="col-md-3" key={item.name}>
+        <FoodItem item={item} onAdd={() => onAddOrder(item)}/>
+      </div>
     ))}
   </div>
 );
