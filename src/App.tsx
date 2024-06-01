@@ -29,10 +29,10 @@ const App: React.FC = () => {
       const existingOrder = prevOrders.find(order => order.name === foodItem.name);
       if (existingOrder) {
         return prevOrders.map(order =>
-          order.name === foodItem.name ? { ...order, quantity: order.quantity + 1 } : order
+          order.name === foodItem.name ? {...order, quantity: order.quantity + 1} : order
         );
       }
-      return [...prevOrders, { ...foodItem, quantity: 1 }];
+      return [...prevOrders, {...foodItem, quantity: 1}];
     });
   };
 
@@ -41,7 +41,7 @@ const App: React.FC = () => {
       const existingOrder = prevOrders.find(order => order.name === foodItem.name);
       if (existingOrder && existingOrder.quantity > 1) {
         return prevOrders.map(order =>
-          order.name === foodItem.name ? { ...order, quantity: order.quantity - 1 } : order
+          order.name === foodItem.name ? {...order, quantity: order.quantity - 1} : order
         );
       }
       return prevOrders.filter(order => order.name !== foodItem.name);
@@ -52,8 +52,12 @@ const App: React.FC = () => {
 
   return (
     <div className="container">
-      <OrdersContainer orders={orders} totalPrice={totalPrice} onRemoveOrder={removeOrder} />
-      <MenuContainer items={FOOD_ITEMS} onAddOrder={addOrder} />
+      <div className="col-md-9">
+        <MenuContainer items={FOOD_ITEMS} onAddOrder={addOrder}/>
+      </div>
+      <div className="col-md-3">
+        <OrdersContainer orders={orders} totalPrice={totalPrice} onRemoveOrder={removeOrder}/>
+      </div>
     </div>
   );
 };
