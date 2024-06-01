@@ -1,0 +1,23 @@
+.food-item {
+  width: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  text-align: left;
+  cursor: pointer;
+  border: 2px solid #000;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.img-container {
+  width: 60px;
+  height: 60px;
+}
+
+.food-img {
+  width: 100%;
+  height: 100%;
+}
