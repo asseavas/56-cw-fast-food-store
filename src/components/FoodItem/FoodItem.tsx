@@ -5,6 +5,8 @@ import friesImg from '../../assets/food-images/fries.png';
 import coffeeImg from '../../assets/food-images/coffee.png';
 import colaImg from '../../assets/food-images/cola.png';
 import milkshakeImg from '../../assets/food-images/milkshake.png';
+import icecream from '../../assets/food-images/icecream.png';
+import waffles from '../../assets/food-images/waffles.png';
 import './FoodItem.css';
 
 const IMAGES: { [key: string]: string } = {
@@ -14,6 +16,8 @@ const IMAGES: { [key: string]: string } = {
   coffee: coffeeImg,
   cola: colaImg,
   milkshake: milkshakeImg,
+  icecream: icecream,
+  waffles: waffles,
 };
 
 interface FoodItemProps {

@@ -1,6 +1,5 @@
 import React from 'react';
 import FoodItem from '../FoodItem/FoodItem';
-import './MenuContainer.css';
 
 interface FoodItem {
   name: string;

@@ -19,6 +19,8 @@ const FOOD_ITEMS: FoodItem[] = [
   { name: 'Coffee', price: 60 },
   { name: 'Cola', price: 50 },
   { name: 'Milkshake', price: 45 },
+  { name: 'Icecream', price: 25 },
+  { name: 'Waffles', price: 30 },
 ];
 
 const App: React.FC = () => {

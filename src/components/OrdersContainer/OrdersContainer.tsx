@@ -1,6 +1,5 @@
 import React from 'react';
 import OrderItem from '../OrderItem/OrderItem';
-import './OrdersContainer.css';
 
 interface Order {
   name: string;
